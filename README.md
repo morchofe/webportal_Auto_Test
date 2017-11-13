@@ -33,7 +33,7 @@ If all seems OK, Ctrl+C to get rid of that, and carry on:
 
 Which should first use jshint to lint the step definitions (options are specified in the Gruntfile.js), and then run the tests, producing output that looks something like:
 
-    [me@computer cucumber-js-selenium-webdriver-example]$ grunt
+    [webportal_Auto_Test]$ grunt
 
 Running "jshint:all" (jshint) task
 >> 11 files lint free.
@@ -101,7 +101,7 @@ This will install Appium, but you'll need to start the server (it's probably bes
 Once that has started successfully, then try running the test:
 
    
-    webportal_Auto_Test $ grunt android
+    [webportal_Auto_Test] $ grunt android
     Running "jshint:all" (jshint) task
 >> 11 files lint free.
 
@@ -124,11 +124,3 @@ displaying home page....
     Then I go to the vehicle reporting page
 
 All done!
-
-## Writing your own tests
-
-If you want to use this as a jumping off point for a new test project, then remove all the git gubbins:
-
-    rm -R .git
-
-You're now ready to make your changes and put it under your own source control (git, or otherwise).
