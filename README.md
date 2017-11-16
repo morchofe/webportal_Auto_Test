@@ -82,6 +82,50 @@ Feature: Analyze api
     Then I get a json response of all software
 
  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+###Run just one tag example @login###
+- Change Grunt.js as below
+jshint: {
+      all: ['Gruntfile.js', 'features/step_definitions/*.js', 'features/support/*.js'],
+      options: {
+        node: true,
+        strict: true,
+        globalstrict: true,
+	tags: grunt.option('cucumbertags')
+      }
+    },
+
+    exec: {
+      run_cucumber_tests: {
+        command: 'node ' + path.join('node_modules', 'cucumber',  'bin', 'cucumber.js') + ' -f pretty -t @login'
+      }
+    },
+
+---- Then run command (grunt exec:run_cucumber_tests)
+
+*******OR*******************************************************
+- Change Grunt.js as below
+jshint: {
+      all: ['Gruntfile.js', 'features/step_definitions/*.js', 'features/support/*.js'],
+      options: {
+        node: true,
+        strict: true,
+        globalstrict: true,
+	tags: grunt.option('cucumbertags')
+      }
+    },
+
+    exec: {
+      run_cucumber_tests: {
+        command: 'node ' + path.join('node_modules', 'cucumber',  'bin', 'cucumber.js') + ' -f pretty -t @' + grunt.option('test')
+      }
+    },
+------ AND RUN command (grunt exec:run_cucumber_tests --test=testin)
+
+
 ## Running the tests on an Android device
 
 I've only tried this with a physical device, but it should work with the emulator with some small changes.

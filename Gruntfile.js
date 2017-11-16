@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 
     exec: {
       run_cucumber_tests: {
-        command: 'node ' + path.join('node_modules', 'cucumber',  'bin', 'cucumber.js -f pretty -t ~@ignore')
+        command: 'node ' + path.join('node_modules', 'cucumber',  'bin', 'cucumber.js') + ' -f pretty -t @' + grunt.option('test')
       }
     },
 

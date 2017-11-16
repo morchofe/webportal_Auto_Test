@@ -1,3 +1,4 @@
+@login
 Feature: Login to Webportal
   As an fire chief user
   In order to find out more about runs
@@ -9,4 +10,3 @@ Feature: Login to Webportal
     Then I go to the home page
     Then I go to the summary page
     Then I go to the vehicle reporting page
-    
