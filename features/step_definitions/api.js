@@ -48,7 +48,7 @@ this.Then(/^I exit the api$/, function (callback) {
 
          res.on('end', function(){
              var fbResponse = JSON.parse(body);
-             console.log("Got a response: ", fbResponse.picture);
+             //console.log("Got a response: ", fbResponse.picture);
          });
      }).on('error', function(e){
            console.log("Got an error: ", e);

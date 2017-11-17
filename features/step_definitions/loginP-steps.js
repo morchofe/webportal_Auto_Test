@@ -4,8 +4,8 @@
 var expect = require('chai').expect;
 
 module.exports = function() {
-    this.World = require('../support/world.js').World;
-    this.before = require('../support/befor.js').before;
+   this.World = require('../support/world.js').World;
+   this.before = require('../support/befor.js').before;
 
 
     this.When(/^I type in username and password$/, function (callback) {
@@ -85,7 +85,8 @@ module.exports = function() {
         callback();
     });
     this.Then(/^I logout of webportal$/, function (callback) {
-      var logout = this.driver.findElement({xpath: './/ul/li[3]/ul/li[2]/a'});
+        this.driver.manage().timeouts().implicitlyWait(4000);
+      var logout = this.driver.findElement({xpath: './/ul/li[3]/a'});
 
           this.driver.sleep(9000);
           logout.click();

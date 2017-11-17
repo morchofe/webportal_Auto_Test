@@ -7,4 +7,3 @@ Feature: Analyze summary page
     When I am on the home page
     Then I click on the summary link
     Then the summary page display
-    

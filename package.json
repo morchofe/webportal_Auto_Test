@@ -1,10 +1,10 @@
 {
-  "name": "cucumber-js-selenium-webdriver-example",
+  "name": "webportal Automation Test",
   "version": "0.0.1",
-  "description": "A starter for acceptance testing using cucumber-js and webdriver-js.",
+  "description": "webportal acceptance testing using cucumber-js and webdriver-js.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Matt-B/cucumber-js-selenium-webdriver-example.git"
+    "url": "https://github.com/morchofe/webportal_Auto_Test.git"
   },
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt"

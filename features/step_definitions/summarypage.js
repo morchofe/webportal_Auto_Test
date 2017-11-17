@@ -5,10 +5,10 @@ var expect = require('chai').expect;
 
 module.exports = function() {
     this.World = require('../support/world.js').World;
-  //  this.before = require('../support/befor.js').before;
+   this.before = require('../support/befor.js').before;
 
 
-this.When(/^I am on the home page$/, function () {
+this.When(/^I am on the home page$/, function (callback) {
          // Write code here that turns the phrase above into concrete actions
 
            console.log("At home page again.");
@@ -16,7 +16,7 @@ this.When(/^I am on the home page$/, function () {
 
                  //*[@id="summary-dashboard"]/h2/text()
 
-            // callback();
+           callback();
        });
 
 
