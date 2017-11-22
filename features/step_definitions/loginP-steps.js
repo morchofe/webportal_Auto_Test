@@ -14,6 +14,7 @@ module.exports = function() {
         console.log("Typing password....");
 
 
+
        callback();
     });
 
@@ -38,10 +39,12 @@ module.exports = function() {
     this.driver.manage().timeouts().implicitlyWait(4000);
           this.driver.sleep(6000);
           var summaryPageDash = this.driver.findElement({xpath:'.//h2'});
+          var header = this.driver.findElement({xpath:'.//div[3]/div/div[1]'});
           expect(summaryPageDash.length).to.not.equal(0);
           summaryPageDash.click();
 
-            //*[@id="summary-dashboard"]/h2/text()
+          expect(header).to.be.visible;
+
 
         callback();
 
@@ -84,13 +87,15 @@ module.exports = function() {
             vehicleReport.click();
         callback();
     });
-    this.Then(/^I logout of webportal$/, function (callback) {
+    this.Then(/^I close webportal$/, function (callback) {
         this.driver.manage().timeouts().implicitlyWait(4000);
-      var logout = this.driver.findElement({xpath: './/ul/li[3]/a'});
+    //  var logout = this.driver.findElement({xpath: './/ul/li[3]/a'});
 
           this.driver.sleep(9000);
-          logout.click();
+          this.driver.manage().deleteAllCookies();
+          //logout.click();
           //this.driver.sleep(3000);
+        //  this.driver.exit();
         callback();
       });
 

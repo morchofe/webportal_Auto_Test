@@ -29,7 +29,6 @@ var myHooks = function () {
 
     return this.driver.manage().deleteAllCookies();
   });
-  
   this.registerHandler('AfterFeatures', function (event) {
     return driver.quit();
   });

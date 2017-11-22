@@ -1,8 +1,10 @@
 Feature: Sort summary page
   As an fire chief user
   I want to be able to  sort the summary page by routes report
+  @all
   @login1
   @login
+  @login4
   Scenario: Sort through the summary page
     When I am on the home page
     Then I click on the summary link

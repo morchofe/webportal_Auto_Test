@@ -124,6 +124,8 @@ jshint: {
       }
     },
 ------ AND RUN command (grunt exec:run_cucumber_tests --test=testin)
+-------OR RUN COMMAND (grunt env:firefox exec:run_cucumber_tests --test=login2) FOR SPECIFIC BROWSER
+
 
 
 ## Running the tests on an Android device

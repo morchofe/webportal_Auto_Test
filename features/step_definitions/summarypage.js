@@ -9,12 +9,14 @@ module.exports = function() {
 
 
 this.When(/^I am on the home page$/, function (callback) {
-         // Write code here that turns the phrase above into concrete actions
+         var summaryViewPage = this.driver.findElement({xpath: './/div/div/ol/li[1]'});
+         var header = this.driver.findElement({xpath:'.//div[3]/div/div[1]'});
 
            console.log("At home page again.");
+           expect(header).to.be.visible;
 
 
-                 //*[@id="summary-dashboard"]/h2/text()
+
 
            callback();
        });

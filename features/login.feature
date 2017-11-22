@@ -10,3 +10,4 @@ Feature: Login to Webportal
     Then I go to the home page
     Then I go to the summary page
     Then I go to the vehicle reporting page
+    Then I close webportal

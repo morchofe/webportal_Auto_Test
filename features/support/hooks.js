@@ -7,7 +7,7 @@ var sanitize = require("sanitize-filename");
 var date = require('date-and-time');
 
 var myHooks = function () {
-
+/*
   this.After(function(scenario) {
     if(scenario.isFailed()) {
       //var date = new date(dateString);
@@ -18,13 +18,13 @@ var myHooks = function () {
         });
       });
     }
-    return this.driver.manage().deleteAllCookies();
+   return this.driver.manage().deleteAllCookies();
   });
 
   this.registerHandler('AfterFeatures', function (event) {
     return driver.quit();
   });
-
+*/
 };
 
 module.exports = myHooks;
